@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: spring-chat
+  ai:
+    deepseek:
+      api-key: sk-b2887d6*********5ac73ebbd0e41
+      chat:
+        options:
+          model: deepseek-chat
+          temperature: 0.8
+        base-url: "https://api.deepseek.com/beta"
