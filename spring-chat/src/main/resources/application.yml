@@ -5,7 +5,7 @@ spring:
     name: spring-chat
   ai:
     deepseek:
-      api-key: sk-b2887d6*********5ac73ebbd0e41
+      api-key: sk-bda06bb0514a4adc8b33dfac2d26cc72
       chat:
         options:
           model: deepseek-chat
