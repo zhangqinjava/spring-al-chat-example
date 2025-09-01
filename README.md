@@ -2,15 +2,16 @@
 Al的应用实现
 项目介绍：spring-chat 简单的聊天模型的实现
         chat-memory 具有聊天记忆的模型实现
-# spring-chat的介绍
-环境准备：JDK17+ 、idea2024及以上版本、 Maven 3.6+ 、Spring Boot 3.3.4 、Spring AI 1.0.0
-您需要使用 DeepSeek 创建 API 密钥才能访问 DeepSeek 语言模型。
-依赖：spring-boot-starter-web: For creating RESTful web services
+## spring-chat的介绍
+- 环境准备：JDK17+ 、idea2024及以上版本、 Maven 3.6+ 、Spring Boot 3.3.4 、Spring AI 1.0.0
+- 您需要使用 DeepSeek 创建 API 密钥才能访问 DeepSeek 语言模型。
+- 依赖：spring-boot-starter-web: For creating RESTful web services
 spring-ai-starter-model-deepseek : To integrate Spring AI with OpenAI
 spring-boot-starter-test: For testing purposes
-申请api-key的操作：
+- 申请api-key的操作：
 在DeepSeek 开放平台页面创建一个帐户，并在API Keys 页面生成一个令牌。
-主要的启动代码：
+## 主要的启动代码：
+<pre>```java 
   @SpringBootApplication
 public class SpringChatApplication {
 
@@ -19,7 +20,9 @@ public class SpringChatApplication {
     }
 
 }
-调用大模型的主要方法：
+```</pre>
+## 调用大模型的主要方法：
+<pre>```java
   @RestController
 public class ChatController {
     public final DeepSeekChatModel chatModel;
@@ -40,12 +43,10 @@ public class ChatController {
         return chatModel.stream(prompt);
     }
 
-}
+}```</pre>
 更详细的操作流程请参考博客：https://blog.csdn.net/weixin_47068446/article/details/149838157?spm=1001.2014.3001.5501
-# chat-memory 具有聊天记忆的本地模型应用的实现
-环境准备：JDK17+ 、idea2024及以上版本、 Maven 3.6+ 、Spring Boot 3.3.4 、Spring AI 1.0.0、mysql8.0+
-依赖准备：spring-ai-starter-model-chat-memory-repository-jdbc、spring-ai-starter-model-deepseek、spring-boot-starter-web、mysql-connector-j
 ## 主要的配置：
+<pre >```yml
   spring:
   application:
     name: Spring-chatMemory
@@ -72,7 +73,9 @@ public class ChatController {
 
 server:
   port: 8081
+```</pre>
 ## 代码实现
+<pre>```java
 @Configuration
 public class AiConfig {
     @Bean
@@ -117,3 +120,4 @@ public class ChatMemoryController {
         return result;
     }
 }
+```</pre>
