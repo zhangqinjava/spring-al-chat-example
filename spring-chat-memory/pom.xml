@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.al</groupId>
-    <artifactId>Spring-chatMemory</artifactId>
+    <artifactId>spring-chat-memory</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Spring-chatMemory</name>
+    <name>spring-chat-memory</name>
     <description>chatMemory</description>
     <url/>
     <licenses>
@@ -54,19 +54,6 @@
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-starter-model-deepseek</artifactId>
-        </dependency>
-
-        <!--将 ChatMemory 存储到关系数据库 依赖包-->
-        <dependency>
-            <groupId>org.springframework.ai</groupId>
-            <artifactId>spring-ai-starter-model-chat-memory-repository-jdbc</artifactId>
-        </dependency>
-
-        <!-- 引入 MySQL 驱动包-->
-        <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
-            <version>8.0.33</version>
         </dependency>
     </dependencies>
     <dependencyManagement>

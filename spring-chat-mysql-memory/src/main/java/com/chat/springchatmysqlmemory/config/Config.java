@@ -1,4 +1,4 @@
-package org.al.chatmemory.config;
+package com.chat.springchatmysqlmemory.config;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class AiConfig {
+public class Config {
     @Bean
     public ChatMemory chatMemory(JdbcChatMemoryRepository repo){
         return MessageWindowChatMemory.builder()
@@ -20,7 +20,7 @@ public class AiConfig {
     }
 
     @Bean
-    public ChatClient chatClient(ChatModel chatModel, ChatMemory memory){
+    public ChatClient chatClient(ChatModel chatModel,ChatMemory memory){
         ChatClient client = ChatClient.builder(chatModel)
                 //设置 chatMemory
                 .defaultAdvisors(MessageChatMemoryAdvisor.builder(memory).build())

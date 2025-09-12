@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: Spring-chatMemory
+  ai:
+    deepseek:
+      api-key: sk-80e280a44c054c478a266f6fa6e14b2c
+      base-url: https://api.deepseek.com
+      chat:
+        options:
+          model: deepseek-chat
+
+server:
+  port: 8081
