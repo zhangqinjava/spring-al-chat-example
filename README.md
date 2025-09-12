@@ -10,6 +10,8 @@ spring-ai-starter-model-deepseek : To integrate Spring AI with OpenAI
 spring-boot-starter-test: For testing purposes
 - 申请api-key的操作：
 在DeepSeek 开放平台页面创建一个帐户，并在API Keys 页面生成一个令牌。
+## 项目介绍
+- spring-chat 启动一个简单的聊天框架。
 ## 主要的启动代码：
 <pre>```java 
   @SpringBootApplication
